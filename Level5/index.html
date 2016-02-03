@@ -8,12 +8,31 @@
 	<body>
 		<div class='navbar navbar-default navbar-static-top'>
 			<div class='container'>
-				<a href='/' class='navbar-brand'>Blasting Off With Bootstrap</a>
-
-				<ul class='nav navbar-nav navbar-right'>
+				<div class='navbar-header'>
+					<a href='/' class='navbar-brand'>Blasting Off With Bootstrap</a>
+					
+					<button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+						<span class='sr-only'>Toggle navigation</span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+					</button>
+				</div>
+				<ul class='nav navbar-nav navbar-right collapse navbar-collapse'>
 					<li><a href='tickets.html'>Tickets</a></li>
 					<li><a href='stations.html'>Stations</a></li>
-					<li><a href='about.html'>About</a></li>
+					<li>
+						<a href='about.html' data-target='#' data-toggle='dropdown'>About <span class='caret'></span></a>
+						<ul class='dropdown-menu'>
+							<li><a href='story.html'>Our Story</a></li>
+							<li><a href='contact.html'>Contact Us</a></li>
+							<li class='divider'></li>
+							<li><a href='/blog'>Blog</a></li>
+							<li class='divider'></li>
+							<li><a href='http://twitter.com/...'>Twitter</a></li>
+							<li><a href='http://facebook.com/...'>Facebook</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -22,13 +41,26 @@
 				<div class='col-md-6'>
 					<h2>The Fastest Way to Space</h2>
 					<p class='lead'>Make your way to space in the comfort of your own rocket, elevator or transporter.</p>
-					<button type='button' class='btn btn-lg btn-default'>Take the Tour</button>
+	
+					<div class='btn-group'>
+						<button type='button' class='btn btn-default btn-lg dropdown-toggle' data-toggle='dropdown'>
+							Take the Tour <span class='caret'></span>
+						</button>
+						<ul class='dropdown-menu'>
+							<li><a href='#'>Transporter</a></li>
+							<li><a href='#'>Orbital Elevator</a></li>
+							<li><a href='#'>RocketBus</a></li>
+							<li class='divider'></li>
+							<li><a href='#'>Learn More</a></li>
+						</ul>
+					</div>
+
 					<button type='button' class='btn btn-lg btn-primary'>Book Tickets Now</button>
 				</div>
 				<div class='col-md-6 visible-md visible-lg'>
 					<img src='../img/img-header.jpg' alt='Blast off with Bootstrap' />
 				</div>
-			</div>
+			</div>	
 			<div class='row text-center features'>
 				<div class='col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0'>
 					<i class='glyphicon glyphicon-briefcase'></i>
@@ -64,6 +96,7 @@
 					<p>Learn more about our transport systems to find out which one is right for you. Pick out the mode of transport that works for your budget and risk level.</p>
 				</div>
 			</div>
+
 			<div class='row text-center'>
 				<div class='transporter col-md-3 col-md-offset-1 well well-sm'>
 					<h3>Transporter</h3>
@@ -106,13 +139,13 @@
 			<div class='row'>
 				<div class='col-md-8'>
 					<h2>Plan Your Trip Today!</h2>
-
+	
 					<ul class='nav nav-tabs'>
 						<li class='active'><a href='#time'>Todays Times</a></li>
 						<li><a href='#deals'>Hot Deals</a></li>
 						<li><a href='#forecast'>Forecast</a></li>
 					</ul>
-
+	
 					<div class='tab-content'>
 						<div class='tab-pane fade active' id='time'>
 							<p>Todays Time here</p>
@@ -125,6 +158,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div class='col-md-3 col-md-offset-1'>
 					<div class='panel-group'>
 						<div class='panel panel-success'>
@@ -168,12 +202,12 @@
 								<h4 class='panel-title'>
 									<a data-toggle='collapse' data-parent='.panel-group' href='#transportationWarning'>Transportation Generals Warning: Transporters</a>
 								</h4>
-							</div>	
+							</div>
 							<div id='transportationWarning' class='panel-collapse collapse'>
 								<div class='panel-body'>
 									<p>Technically, transporting means making a clone of yourself and killing off the other one. If you believe in a soul, you should be aware of this fact before attempting travel using a transporter.</p>
 								</div>
-							</div>
+							</div>	
 						</div>
 					</div>
 				</div>
@@ -198,7 +232,7 @@
 					</div>
 
 					<div class='clearfix visible-xs'></div>
-		
+	
 					<div class='col-sm-2 col-xs-6'>
 						<h4>Stay in Touch</h4>
 						<ul class='list-unstyled'>
